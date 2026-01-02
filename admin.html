@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <title>Admin — Velvet Vogue</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <nav class="navbar navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="index(home page).html">Velvet Vogue</a>
+                <div class="ms-auto">
+                    <a class="btn btn-outline-light" href="products.html">View Site</a>
+                </div>
+            </div>
+        </nav>
+
+        <main class="py-5">
+            <div class="container">
+                <h2>Admin Dashboard</h2>
+                <p class="text-muted">Add and remove products (stored locally in your browser).</p>
+
+                <div class="card p-3 mb-4">
+                    <div class="row g-2">
+                        <div class="col-md-5"><input id="admin-name" class="form-control" placeholder="Product name"></div>
+                        <div class="col-md-3"><input id="admin-price" class="form-control" type="number" placeholder="Price"></div>
+                        <div class="col-md-4">
+                            <input id="admin-img" class="form-control" placeholder="Image URL (optional)">
+                        </div>
+                    </div>
+                    <div class="mt-3">
+                        <button class="btn btn-success" onclick="addProductFromAdmin()">Add Product</button>
+                    </div>
+                </div>
+
+                <h5>Products</h5>
+                <div id="admin-products" class="row g-3"></div>
+            </div>
+        </main>
+
+        <footer class="site-footer bg-dark text-white py-3">
+            <div class="container text-center small">© 2025 Velvet Vogue</div>
+        </footer>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="script.js"></script>
+        <script>document.addEventListener('DOMContentLoaded', renderAdminProducts)</script>
+    </body>
+</html>
